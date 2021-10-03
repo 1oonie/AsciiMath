@@ -1,0 +1,4 @@
+name = "AsciiMath"
+uuid = "d2af1b3a-c6e0-4f81-80f3-c8856c4c8fe2"
+authors = ["esmecat <71032999+MhmCats@users.noreply.github.com>"]
+version = "0.1.0"
