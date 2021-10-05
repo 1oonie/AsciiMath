@@ -2,8 +2,8 @@ module Tokens
 
 abstract type AbstractToken end
 
-struct Number <: AbstractToken
-    value::Int
+struct Num <: AbstractToken
+    value::Number
 end
 
 struct Parenthesis <: AbstractToken
@@ -11,30 +11,23 @@ struct Parenthesis <: AbstractToken
 end
 
 struct Function <: AbstractToken
-    name::String
+    func::Any
     argument::String
 end
 
 abstract type AbstractOperator <: AbstractToken end
 
 struct Plus <: AbstractOperator
-    left::Union{Number, AbstractOperator}
-    right::Union{Number, AbstractOperator}
 end
 
 struct Minus <: AbstractOperator
-    left::Union{Number, AbstractOperator}
-    right::Union{Number, AbstractOperator}
 end
 
 struct Mul <: AbstractOperator
-    left::Union{Number, AbstractOperator}
-    right::Union{Number, AbstractOperator}
 end
 
 struct Div <: AbstractOperator
-    left::Union{Number, AbstractOperator}
-    right::Union{Number, AbstractOperator}
 end
 
+struct Pow
 end
