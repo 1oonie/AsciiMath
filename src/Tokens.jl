@@ -6,13 +6,10 @@ struct Num <: AbstractToken
     value::Number
 end
 
-struct Parenthesis <: AbstractToken
-    contains::String
+struct RBrace <: AbstractToken
 end
 
-struct Function <: AbstractToken
-    func::Any
-    argument::String
+struct LBrace <: AbstractToken
 end
 
 abstract type AbstractOperator <: AbstractToken end
@@ -29,5 +26,7 @@ end
 struct Div <: AbstractOperator
 end
 
-struct Pow
+struct Pow <: AbstractOperator
+end
+
 end

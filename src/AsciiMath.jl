@@ -1,5 +1,6 @@
 module AsciiMath
 
-greet() = print("Hello World!")
+include("Tokens.jl")
+include("Lexer.jl")
 
-end # module
+end
