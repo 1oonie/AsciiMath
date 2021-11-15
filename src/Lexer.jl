@@ -21,7 +21,7 @@ function lex(code::String)::Vector{Tokens.AbstractToken}
                     push!(number, c)
                 elseif c == '.'
                     if haspoint
-                        throw("two decimal points in a number literal not allowed!")
+                        throw(ErrorException("two decimal points in a number literal not allowed!"))
                     else
                         push!(number, c)
                         haspoint = true
@@ -56,7 +56,7 @@ function lex(code::String)::Vector{Tokens.AbstractToken}
         elseif c == ')'
             push!(result, Tokens.LBrace())
         else
-            throw("unexpected token '$c'")
+            throw(ErrorException("unexpected token '$c'"))
         end
         
         pos += 1
